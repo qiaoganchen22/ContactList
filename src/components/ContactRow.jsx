@@ -1,8 +1,8 @@
-export default function ContactRow({ contact, setCount }) {
+export default function ContactRow({ setCount, contact }) {
   return (
     <tr
       onClick={() => {
-        setCount(contact);
+        setCount(contact.id);
       }}
     >
       <td>{contact.name}</td>
@@ -10,9 +10,8 @@ export default function ContactRow({ contact, setCount }) {
       <td>{contact.phone}</td>
       <td>
         <button
-          className="details"
           onClick={() => {
-            setCount(contact);
+            setCount(contact.id);
           }}
         >
           Details

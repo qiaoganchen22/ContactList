@@ -5,13 +5,13 @@ import Details from "./components/Details";
 
 function App() {
   const [count, setCount] = useState(null);
-
+  console.log(count, "app count");
   return (
     <>
       {count ? (
-        <Details count={count} setCount={setCount}/>
+        <Details count={count} setCount={setCount} />
       ) : (
-        <ContactList setCount={setCount}/>
+        <ContactList setCount={setCount} />
       )}
     </>
   );
